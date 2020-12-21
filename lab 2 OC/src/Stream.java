@@ -2,23 +2,16 @@ public class Stream {
 
 	private int maxTimeOfStream;
 	private String streamId;
+	private int prioritet;
 
-	private String procId;
-
-	public Stream(String streamId, int maxTimeOfStream, String procId) {
+	public Stream(String streamId, int maxTimeOfStream, int prioritet) {
 		this.streamId = streamId;
-		this.procId = procId;
 		this.maxTimeOfStream = maxTimeOfStream;
-
+		this.prioritet = prioritet;
 	}
-
 
 	public String getStreamId() {
 		return streamId;
-	}
-
-	public String getProcId() {
-		return procId;
 	}
 
 	public int getMaxTimeOfStream() {
@@ -36,4 +29,17 @@ public class Stream {
 		maxTimeOfStream--;
 	}
 
+	public int getPrioritet() {
+		return prioritet;
+	}
+
+	public void Change() {
+		prioritet = 0;
+	}
+
+
+	public void setPrioritet(int prioritet) {
+		this.prioritet = prioritet;
+	}
 }
+
